@@ -28,6 +28,7 @@
 -->
         <!--/ logo figure -->
         <!-- logo text -->
+<!--
         <svg version="1.1" class="mautic-logo-text mnl-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 260 65" enable-background="new 0 0 260 65" xml:space="preserve">
             <g>
                 <path class="m" d="M39.336,57.983V37.951c0-4.932-2.58-9.409-7.664-9.409
@@ -51,6 +52,7 @@
                 c2.959,0,5.919-0.834,8.194-3.11L247.803,53.203z"/>
             </g>
         </svg>
+-->
         <!--/ logo text -->
     </a>
     <!--/ brand -->
