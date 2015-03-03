@@ -123,34 +123,34 @@ Mautic.renderClickRateDoughnut = function () {
 }
 
 Mautic.updateActiveVisitorCount = function () {
-    mQuery.ajax({
-        url: mauticAjaxUrl,
-        type: "POST",
-        data: "action=dashboard:viewingVisitors",
-        dataType: "json",
-        success: function (response) {
-            if (response.success) {
-                var element = mQuery('#active-visitors');
-                element.text(response.viewingVisitors);
-                if (response.viewingVisitors != Mautic.ActiveVisitorsCount) {
-                    var color = '#34D43B';
-                    if (Mautic.ActiveVisitorsCount > response.viewingVisitors) {
-                        color = '#BC2525';
-                    }
-                    element.css('text-shadow', color+' 0px 0px 50px');
-                    setTimeout(function() {
-                        element.css('text-shadow', '#fff 0px 0px 50px');
-                    }, 3000);
-                }
-                Mautic.ActiveVisitorsCount = response.viewingVisitors;
-            }
-
-            Mautic.moderatedIntervalCallbackIsComplete('ActiveVisitorsLoop');
-        },
-        error: function (request, textStatus, errorThrown) {
-            Mautic.processAjaxError(request, textStatus, errorThrown);
-
-            Mautic.moderatedIntervalCallbackIsComplete('ActiveVisitorsLoop');
-        }
-    });
+//    mQuery.ajax({
+//        url: mauticAjaxUrl,
+//        type: "POST",
+//        data: "action=dashboard:viewingVisitors",
+//        dataType: "json",
+//        success: function (response) {
+//            if (response.success) {
+//                var element = mQuery('#active-visitors');
+//                element.text(response.viewingVisitors);
+//                if (response.viewingVisitors != Mautic.ActiveVisitorsCount) {
+//                    var color = '#34D43B';
+//                    if (Mautic.ActiveVisitorsCount > response.viewingVisitors) {
+//                        color = '#BC2525';
+//                    }
+//                    element.css('text-shadow', color+' 0px 0px 50px');
+//                    setTimeout(function() {
+//                        element.css('text-shadow', '#fff 0px 0px 50px');
+//                    }, 3000);
+//                }
+//                Mautic.ActiveVisitorsCount = response.viewingVisitors;
+//            }
+//
+//            Mautic.moderatedIntervalCallbackIsComplete('ActiveVisitorsLoop');
+//        },
+//        error: function (request, textStatus, errorThrown) {
+//            Mautic.processAjaxError(request, textStatus, errorThrown);
+//
+//            Mautic.moderatedIntervalCallbackIsComplete('ActiveVisitorsLoop');
+//        }
+//    });
 }
