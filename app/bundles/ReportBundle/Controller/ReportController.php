@@ -41,7 +41,7 @@ class ReportController extends FormController
             'report:reports:publishother'
         ), "RETURN_ARRAY");
 
-        if (!$permissions['report:reports:viewown'] && !$permissions['report:reports:viewother']) {
+        if (!$permissions['report:reports:viewown'] || !$permissions['report:reports:viewother']) {
             return $this->accessDenied();
         }
 
