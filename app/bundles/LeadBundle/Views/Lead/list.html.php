@@ -23,6 +23,12 @@ if ($tmpl == 'index')
 
                 echo $view->render('MauticCoreBundle:Helper:tableheader.html.php', array(
                     'sessionVar' => 'lead',
+                    'orderBy'    => 'l.source',
+                    'text'       => 'Source', //'mautic.core.source',
+                    'class'      => 'col-lead-name'
+                ));
+                echo $view->render('MauticCoreBundle:Helper:tableheader.html.php', array(
+                    'sessionVar' => 'lead',
                     'orderBy'    => 'l.lastname, l.firstname, l.company, l.email',
                     'text'       => 'mautic.core.name',
                     'class'      => 'col-lead-name'
@@ -103,6 +109,7 @@ if ($tmpl == 'index')
                     ));
                     ?>
                 </td>
+                <td class="visible-md visible-lg"><?php echo $fields['core']['email']['source']; ?></td>
                 <td>
                     <a href="<?php echo $view['router']->generate('mautic_lead_action', array("objectAction" => "view", "objectId" => $item->getId())); ?>" data-toggle="ajax">
                         <?php if (in_array($item->getId(), $noContactList)) : ?>
