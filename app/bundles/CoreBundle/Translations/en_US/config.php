@@ -10,7 +10,7 @@
 $config = array(
     'name'   => 'English - United States',
     'locale' => 'en_US',
-    'author' => 'Mautic Team'
+    'author' => 'Team'
 );
 
 return $config;
