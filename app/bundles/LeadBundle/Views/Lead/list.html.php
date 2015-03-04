@@ -109,7 +109,7 @@ if ($tmpl == 'index')
                     ));
                     ?>
                 </td>
-                <td class="visible-md visible-lg"><?php echo $fields['core']['email']['source']; ?></td>
+                <td class="visible-md visible-lg"><?php echo $fields['core']['source']['value']; ?></td>
                 <td>
                     <a href="<?php echo $view['router']->generate('mautic_lead_action', array("objectAction" => "view", "objectId" => $item->getId())); ?>" data-toggle="ajax">
                         <?php if (in_array($item->getId(), $noContactList)) : ?>
