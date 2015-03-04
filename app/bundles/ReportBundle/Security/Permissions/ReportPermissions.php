@@ -24,7 +24,7 @@ class ReportPermissions extends AbstractPermissions
     public function __construct($params)
     {
         parent::__construct($params);
-        $this->addExtendedPermissions('reports');
+        $this->addExtendedPermissions('reports', false);
     }
 
     /**
